@@ -4,7 +4,7 @@
 #include <stdint.h>
 
 typedef uint_least8_t  u8;
-typedef unsigned char  byte;
+typedef unsigned char  byte; //byte = octet, whatever
 typedef uint_least16_t u16;
 typedef uint_least32_t u32;
 typedef int_least8_t   s8;
@@ -14,8 +14,8 @@ typedef int_least8_t   s8;
 
 #define setBit(addr) (addr = 1)
 #define clearBit(addr) (addr = 0)
-#define bit(addr) (addr ? 1 : 0)
-#define zbit(addr) (addr ? 0 : 1)
+#define bit(addr) ((addr) ? 1 : 0)
+#define zbit(addr) ((addr) ? 0 : 1)
 
 //http://nesdev.com/6502.txt
 union statusRegister{
